@@ -1,8 +1,8 @@
 source("src/config.R")
 
-source("src/get_polls.R")
+source("src/scraper/get_polls.R")
 
-source("src/get_elections.R")
+source("src/scraper/get_elections.R")
 
 source("src/join_votedates.R")
 

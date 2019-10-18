@@ -69,8 +69,8 @@ read_html(url) %>%
 
 tables[[1]] %>% 
   html_table(fill = T) %>% 
-  as_tibble(.name_repair = "unique") %>% 
-  select(1,2,3,5,7,9,11,13,15,17,19) %>% 
+  as_tibble(.name_repair = "unique") %>%
+  select(1,2,3,4,6:ncol(.)) %>% #13) %>%  #5,7,9,11,13,15,17,19) %>% 
   gather(key = "Partei", value = "Pct", 5:ncol(.)) ->
   table
 names(table) <- c("Institut","Auftraggeber","Befragte","Datum","Partei","Pct")
@@ -79,7 +79,7 @@ while (j <= length(tables)){
   tables[[j]] %>% 
     html_table(fill = T) %>%
     as_tibble(.name_repair = "unique") %>%
-    select(1,2,3,5,7,9,11,13,15,17,19) %>% 
+    select(1,2,3,4,6:ncol(.)) %>%  #5,7,9,11,13,15,17,19) %>% 
     gather(key = "Partei", value = "Pct", 5:ncol(.)) ->
     t
   names(t) <- c("Institut","Auftraggeber","Befragte","Datum","Partei","Pct")
