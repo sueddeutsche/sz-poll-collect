@@ -1,0 +1,106 @@
+Vote_Date,Parliament_ID,Parliament_Name,Party_ID,Party_Name,Vote_Pct
+2017-05-07,15,Schleswig-Holstein,1,CDUCSU,32
+2016-09-04,8,Mecklenburg-Vorpommern,1,CDUCSU,19
+2017-10-15,9,Niedersachsen,1,CDUCSU,33.6
+2019-09-01,4,Brandenburg,1,CDUCSU,15.6
+2016-03-13,14,Sachsen-Anhalt,1,CDUCSU,29.8
+2016-09-18,3,Berlin,1,CDUCSU,17.6
+2017-05-14,10,Nordrhein-Westfalen (NRW),1,CDUCSU,33
+2019-09-01,13,Sachsen,1,CDUCSU,32.1
+2018-10-28,7,Hessen,1,CDUCSU,27
+2016-03-13,11,Rheinland-Pfalz,1,CDUCSU,31.8
+2018-10-14,2,Bayern,1,CDUCSU,37.2
+2016-03-13,1,Baden-Württemberg,1,CDUCSU,27
+2017-03-26,12,Saarland,1,CDUCSU,40.7
+2017-09-24,0,Bundestag,1,CDUCSU,32.9
+2019-05-26,17,Europäisches Parlament,1,CDUCSU,28.9
+2017-05-07,15,Schleswig-Holstein,2,SPD,27.3
+2016-09-04,8,Mecklenburg-Vorpommern,2,SPD,30.6
+2017-10-15,9,Niedersachsen,2,SPD,36.9
+2019-09-01,4,Brandenburg,2,SPD,26.2
+2016-03-13,14,Sachsen-Anhalt,2,SPD,10.6
+2016-09-18,3,Berlin,2,SPD,21.6
+2017-05-14,10,Nordrhein-Westfalen (NRW),2,SPD,31.2
+2019-09-01,13,Sachsen,2,SPD,7.7
+2018-10-28,7,Hessen,2,SPD,19.8
+2016-03-13,11,Rheinland-Pfalz,2,SPD,36.2
+2018-10-14,2,Bayern,2,SPD,9.7
+2016-03-13,1,Baden-Württemberg,2,SPD,12.7
+2017-03-26,12,Saarland,2,SPD,29.6
+2017-09-24,0,Bundestag,2,SPD,20.5
+2019-05-26,17,Europäisches Parlament,2,SPD,15.8
+2017-05-07,15,Schleswig-Holstein,3,FDP,11.5
+2016-09-04,8,Mecklenburg-Vorpommern,3,FDP,3
+2017-10-15,9,Niedersachsen,3,FDP,7.5
+2019-09-01,4,Brandenburg,3,FDP,4.1
+2016-03-13,14,Sachsen-Anhalt,3,FDP,4.9
+2016-09-18,3,Berlin,3,FDP,6.7
+2017-05-14,10,Nordrhein-Westfalen (NRW),3,FDP,12.6
+2019-09-01,13,Sachsen,3,FDP,4.5
+2018-10-28,7,Hessen,3,FDP,7.5
+2016-03-13,11,Rheinland-Pfalz,3,FDP,6.2
+2018-10-14,2,Bayern,3,FDP,5.1
+2016-03-13,1,Baden-Württemberg,3,FDP,8.3
+2017-03-26,12,Saarland,3,FDP,3.3
+2017-09-24,0,Bundestag,3,FDP,10.7
+2019-05-26,17,Europäisches Parlament,3,FDP,5.4
+2017-05-07,15,Schleswig-Holstein,4,Gruene,12.9
+2016-09-04,8,Mecklenburg-Vorpommern,4,Gruene,4.8
+2017-10-15,9,Niedersachsen,4,Gruene,8.7
+2019-09-01,4,Brandenburg,4,Gruene,10.8
+2016-03-13,14,Sachsen-Anhalt,4,Gruene,5.2
+2016-09-18,3,Berlin,4,Gruene,15.2
+2017-05-14,10,Nordrhein-Westfalen (NRW),4,Gruene,6.4
+2019-09-01,13,Sachsen,4,Gruene,8.6
+2018-10-28,7,Hessen,4,Gruene,19.8
+2016-03-13,11,Rheinland-Pfalz,4,Gruene,5.3
+2018-10-14,2,Bayern,4,Gruene,17.5
+2016-03-13,1,Baden-Württemberg,4,Gruene,30.3
+2017-03-26,12,Saarland,4,Gruene,4
+2017-09-24,0,Bundestag,4,Gruene,8.9
+2019-05-26,17,Europäisches Parlament,4,Gruene,20.5
+2017-05-07,15,Schleswig-Holstein,5,Linke,3.8
+2016-09-04,8,Mecklenburg-Vorpommern,5,Linke,13.2
+2017-10-15,9,Niedersachsen,5,Linke,4.6
+2019-09-01,4,Brandenburg,5,Linke,10.7
+2016-03-13,14,Sachsen-Anhalt,5,Linke,16.3
+2016-09-18,3,Berlin,5,Linke,15.6
+2017-05-14,10,Nordrhein-Westfalen (NRW),5,Linke,4.9
+2019-09-01,13,Sachsen,5,Linke,10.4
+2018-10-28,7,Hessen,5,Linke,6.3
+2016-03-13,11,Rheinland-Pfalz,5,Linke,2.8
+2018-10-14,2,Bayern,5,Linke,3.2
+2016-03-13,1,Baden-Württemberg,5,Linke,2.9
+2017-03-26,12,Saarland,5,Linke,12.8
+2017-09-24,0,Bundestag,5,Linke,9.2
+2019-05-26,17,Europäisches Parlament,5,Linke,5.5
+2017-05-07,15,Schleswig-Holstein,7,AfD,5.9
+2016-09-04,8,Mecklenburg-Vorpommern,7,AfD,20.8
+2017-10-15,9,Niedersachsen,7,AfD,6.2
+2019-09-01,4,Brandenburg,7,AfD,23.5
+2016-03-13,14,Sachsen-Anhalt,7,AfD,24.3
+2016-09-18,3,Berlin,7,AfD,14.2
+2017-05-14,10,Nordrhein-Westfalen (NRW),7,AfD,7.4
+2019-09-01,13,Sachsen,7,AfD,27.5
+2018-10-28,7,Hessen,7,AfD,13.1
+2016-03-13,11,Rheinland-Pfalz,7,AfD,12.6
+2018-10-14,2,Bayern,7,AfD,10.2
+2016-03-13,1,Baden-Württemberg,7,AfD,15.1
+2017-03-26,12,Saarland,7,AfD,6.2
+2017-09-24,0,Bundestag,7,AfD,12.6
+2019-05-26,17,Europäisches Parlament,7,AfD,11
+2017-05-07,15,Schleswig-Holstein,0,Sonstige,12.5
+2016-09-04,8,Mecklenburg-Vorpommern,0,Sonstige,29.4
+2017-10-15,9,Niedersachsen,0,Sonstige,8.7
+2019-09-01,4,Brandenburg,0,Sonstige,9.1
+2016-03-13,14,Sachsen-Anhalt,0,Sonstige,33.2
+2016-09-18,3,Berlin,0,Sonstige,23.3
+2017-05-14,10,Nordrhein-Westfalen (NRW),0,Sonstige,11.9
+2019-09-01,13,Sachsen,0,Sonstige,9.2
+2018-10-28,7,Hessen,0,Sonstige,6.5
+2016-03-13,11,Rheinland-Pfalz,0,Sonstige,17.7
+2018-10-14,2,Bayern,0,Sonstige,27.2
+2016-03-13,1,Baden-Württemberg,0,Sonstige,18.8
+2017-03-26,12,Saarland,0,Sonstige,9.6
+2017-09-24,0,Bundestag,0,Sonstige,17.8
+2019-05-26,17,Europäisches Parlament,0,Sonstige,12.9
