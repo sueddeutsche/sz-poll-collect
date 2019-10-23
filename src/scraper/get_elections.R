@@ -17,4 +17,6 @@ elections %>%
   select('Vote_Date' = Wahltag,Parliament_ID,Parliament_Name,Party_ID,'Party_Name' = Partei, 'Vote_Pct' = Anteil) ->
   elections
 
-rm(df_parties)
+elections -> df_elections
+
+rm(df_parties,elections)

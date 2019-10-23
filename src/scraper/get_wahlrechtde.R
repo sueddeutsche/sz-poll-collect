@@ -13,17 +13,3 @@ df.wahlrecht %>%
   df_wahlrecht
 
 rm(df.wahlrecht)
-
-df.wahlrecht %>%
-  mutate(
-    Institut = str_remove(Institut,".htm"),
-    Datum = dmy(Datum)
-    ) %>%
-  filter(
-    !is.na(Datum),
-    !str_detect(Befragte, "wahl")
-    ) %>% 
-  View()
-
-
-
