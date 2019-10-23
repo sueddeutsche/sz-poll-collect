@@ -9,7 +9,7 @@ for (i in c(1:nrow(df_polls))){
   poll.id <- poll[[1,1]]
   parliament <- poll[[1,3]]
   parliament.elections <-
-    elections %>% 
+    df_elections %>% 
     filter(Parliament_ID == parliament)
   poll.date <- as_date(poll[[1,2]])
   vote.date <- NA
@@ -47,8 +47,8 @@ df %>%
   left_join(select(df_polls,Poll_ID,Vote_Date)) ->
   df
 
-elections %>% 
+df_elections %>% 
   mutate(Parliament_ID = as.character(Parliament_ID)) ->
-  elections
+  df_elections
 
 rm(data,df_polls,df_vote.dates,parliament.elections,poll,date,election_found,election.date,i,parliament,poll.date,poll.id,vote.date)

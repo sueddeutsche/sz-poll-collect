@@ -15,7 +15,7 @@ df %>%
     !is.na(Vote_Date),
     Party_Name != "Sonstige"
     ) %>% 
-  left_join(elections) %>% 
+  left_join(df_elections) %>% 
   mutate(
     n = as.numeric(n),
     Distance = Vote_Date - Date,
