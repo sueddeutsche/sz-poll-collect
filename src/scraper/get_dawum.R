@@ -1,8 +1,8 @@
 read_json("data/dawum.json", simplifyVector = T) ->
   dawum
 
-source("src/get_dawum_surveys.R")
-source("src/get_dawum_meta.R")
+source("src/scraper/get_dawum_surveys.R")
+source("src/scraper/get_dawum_meta.R")
 
 df %>% 
   left_join(df.institutes) %>% 

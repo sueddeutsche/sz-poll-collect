@@ -1,4 +1,4 @@
-# Befragte cleanen
+# RegEx from Hell
 
 save(df_wahlrecht, file = "data/df_wahlrecht_raw.Rdata")
 
@@ -92,3 +92,24 @@ df_wahlrecht <- df_wahlrecht_
 
 save(df_wahlrecht,file = "data/df_wahlrecht_clean.Rdata")
 rm(df_wahlrecht_)
+
+df_wahlrecht %>% 
+  left_join(read_csv("data/helper/match_parliament_wahlrecht.csv")) %>%
+  select(Parliament_ID,Parliament_Name,Institut,Datum,Befragte,Methode,Partei,Pct) ->
+  df_wahlrecht
+
+df_wahlrecht %>% 
+  select(Parliament_ID,Institut,Datum) %>% 
+  unique() %>% 
+  rowid_to_column("Poll_ID") %>% 
+  mutate(Poll_ID = as.character(2000 + as.numeric(Poll_ID))) ->
+  df_wahlrecht_polls
+
+df_wahlrecht %>% 
+  left_join(df_wahlrecht_polls) %>% 
+  left_join(read_csv("data/helper/match_institute.csv")) %>% 
+  left_join(read_csv("data/helper/match_party.csv")) %>% 
+  select(Poll_ID, Parliament_ID, Parliament_Name, Institute_ID, Institute_Name,'Date' = Datum, 'n' = Befragte, Party_Name,Pct) ->
+  df_wahlrecht
+
+rm(df_wahlrecht_polls)
