@@ -62,7 +62,7 @@ for (i in c(1:length(links))){
 }
 
 # Sonderfall Bremen
-url <- links[5]
+url <- "http://www.wahlrecht.de/umfragen/landtage/bremen.htm"
 read_html(url) %>% 
   html_nodes("table.wilko") ->
   tables
@@ -70,7 +70,7 @@ read_html(url) %>%
 tables[[1]] %>% 
   html_table(fill = T) %>% 
   as_tibble(.name_repair = "unique") %>%
-  select(1,2,3,4,6:ncol(.)) %>% #13) %>%  #5,7,9,11,13,15,17,19) %>% 
+  select(1,2,3,5,7,9,11,13,15,17,19) %>% 
   gather(key = "Partei", value = "Pct", 5:ncol(.)) ->
   table
 names(table) <- c("Institut","Auftraggeber","Befragte","Datum","Partei","Pct")
@@ -79,7 +79,7 @@ while (j <= length(tables)){
   tables[[j]] %>% 
     html_table(fill = T) %>%
     as_tibble(.name_repair = "unique") %>%
-    select(1,2,3,4,6:ncol(.)) %>%  #5,7,9,11,13,15,17,19) %>% 
+    select(1,2,3,5,7,9,11,13,15,17,19) %>%
     gather(key = "Partei", value = "Pct", 5:ncol(.)) ->
     t
   names(t) <- c("Institut","Auftraggeber","Befragte","Datum","Partei","Pct")
@@ -95,6 +95,10 @@ table %>%
 
 df.wahlrecht %>% 
   rbind(table) ->
+  df.wahlrecht
+
+df.wahlrecht %>% 
+  select(Land,Institut,Datum,Befragte,Partei,Pct) ->
   df.wahlrecht
 
 rm(t,table,tables,url,links,i,j)

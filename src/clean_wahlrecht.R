@@ -2,7 +2,10 @@
 
 save(df_wahlrecht, file = "data/df_wahlrecht_raw.Rdata")
 
+load("data/df_wahlrecht_raw.Rdata")
+
 df_wahlrecht %>%
+  separate(Partei, into = c("Partei"), sep = "[.]", extra = "drop") %>% 
   mutate(
     Institut = str_remove(Institut,".htm"),
     Datum = dmy(Datum),
@@ -108,7 +111,7 @@ df_wahlrecht %>%
 df_wahlrecht %>% 
   left_join(df_wahlrecht_polls) %>% 
   left_join(read_csv("data/helper/match_institute.csv")) %>% 
-  left_join(read_csv("data/helper/match_party.csv")) %>% 
+  left_join(read_csv("data/helper/match_party.csv")) %>%
   select(Poll_ID, Parliament_ID, Parliament_Name, Institute_ID, Institute_Name,'Date' = Datum, 'n' = Befragte, Party_Name,Pct) ->
   df_wahlrecht
 
