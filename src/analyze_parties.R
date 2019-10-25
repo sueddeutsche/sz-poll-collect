@@ -1,3 +1,5 @@
+# How does polling error affect different parties?
+
 df %>% 
   filter(
     !is.na(Vote_Date),
