@@ -27,20 +27,30 @@ for (i in c(1:length(links))){
     html_nodes("table.wilko") ->
     tables
   
-  tables[[1]] %>% 
+  table <-
+    tables[[1]] %>% 
     html_table(fill = T) %>% 
-    gather(key = "Partei", value = "Pct", 6:ncol(.)) %>% 
-    select(-5) ->
-    table
+    as.data.frame()
+  table <- table[,c(1:4,6:ncol(table))]
+  while(is.na(names(table)[ncol(table)])){table <- table[,1:(ncol(table)-1)]}
+  table <-
+    table %>% 
+    as_tibble() %>% 
+    gather(key = "Partei", value = "Pct", 5:ncol(.))
   names(table) <- c("Institut","Auftraggeber","Befragte","Datum","Partei","Pct")
   j <- 2
   
   while (j <= length(tables)){
-    tables[[j]] %>% 
+    t <-
+      tables[[j]] %>% 
       html_table(fill = T) %>% 
-      gather(key = "Partei", value = "Pct", 6:ncol(.)) %>% 
-      select(-5) ->
-      t
+      as.data.frame()
+    t <- t[,c(1:4,6:ncol(t))]
+    while(is.na(names(t)[ncol(t)])){t <- t[,1:(ncol(t)-1)]}
+    t <-
+      t %>% 
+      as_tibble() %>% 
+      gather(key = "Partei", value = "Pct", 5:ncol(.)) 
     names(t) <- c("Institut","Auftraggeber","Befragte","Datum","Partei","Pct")
     table %>% 
       rbind(t) ->

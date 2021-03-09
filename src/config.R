@@ -4,12 +4,14 @@ library(clipr)
 library(lubridate)
 library(RSelenium)
 library(xml2)
-library(cronR)
 library(jsonlite)
 
  library(googledrive)
 library(googlesheets4)
 
 library(wdman)
+
+#install.packages('DescTools')
+library(DescTools)
 
 # library(germanpolls)

@@ -1,5 +1,5 @@
 elections <-
-  read_csv("data/elections_1993_2019.csv")
+  read_csv("data/elections_1946_2019.csv")
 
 df %>% 
   select(Poll_ID,Date,Parliament_ID,Parliament_Name) %>% 
