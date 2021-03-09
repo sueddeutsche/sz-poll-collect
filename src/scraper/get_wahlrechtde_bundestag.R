@@ -49,8 +49,9 @@ for (i in c(1:length(ilinks))){
       t
     
     t[[1,1]] <- "Datum"
+    t[,2] <- as.character(t[,2])
     t[[1,2]] <- "X1"
-    names(t) <- as.vector(t[1,])
+    names(t) <- as.character(as.vector(t[1,]))
     for (k in c(1:length(names(t)))){if(is.na(names(t)[k])){names(t)[k] <- paste0("NULL",k)}}
     for (k in c(1:length(names(t)))){if(names(t)[k] == "NA"){names(t)[k] <- paste0("NULL",k)}}
     for (k in c(1:length(names(t)))){if(names(t)[k] == ""){names(t)[k] <- paste0("NULL",k)}}
