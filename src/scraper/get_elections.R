@@ -1,5 +1,15 @@
 elections <-
-  read_csv("data/elections_1946_2019.csv")
+  'https://docs.google.com/spreadsheets/d/19tNX3uvMCwGZM2WpHHWsx9QuxDQqC5BVhz5V-zsVNIg/edit?usp=sharing' %>% 
+  googlesheets4::read_sheet(col_types = 'ccnnnnnnnn') %>% 
+  as_tibble()
+
+elections <-
+  elections %>% 
+  mutate(
+    Wahltag = Wahltag %>% dmy(),
+    Jahr = Wahltag %>% year()) %>% 
+  select(Land,Jahr, Wahltag, Wahlbeteiligung, everything()) %>% 
+  pivot_longer(names_to = 'Partei', values_to = 'Anteil', 5:ncol(.))
 
 df %>% 
   select(Poll_ID,Date,Parliament_ID,Parliament_Name) %>% 
